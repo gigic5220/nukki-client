@@ -5,11 +5,11 @@ import {SessionProvider} from "next-auth/react";
 import {QueryClientProvider} from "@tanstack/react-query";
 import getQueryClient from "@/app/getQueryClient";
 
-type AppWrapperClientComponentProps = {
+type AppWrapperComponentProps = {
     children: ReactNode
 }
 
-const AppWrapperClientComponent = ({children}: AppWrapperClientComponentProps) => {
+const AppWrapperComponent = ({children}: AppWrapperComponentProps) => {
     const queryClient = getQueryClient();
 
     return <QueryClientProvider client={queryClient}>
@@ -19,4 +19,4 @@ const AppWrapperClientComponent = ({children}: AppWrapperClientComponentProps) =
     </QueryClientProvider>
 }
 
-export default AppWrapperClientComponent;
+export default AppWrapperComponent;
