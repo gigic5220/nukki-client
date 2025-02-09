@@ -8,11 +8,10 @@ type LayoutWrapperComponentProps = {
     children: ReactNode
 }
 
-const LayoutWrapperComponent = ({children}: LayoutWrapperComponentProps) => {
+export default function LayoutWrapperComponent({children}: LayoutWrapperComponentProps) {
     return <div>
         <HeaderComponent/>
             {children}
         <BottomNavigationComponent/>
     </div>
 }
-export default LayoutWrapperComponent;

@@ -1,11 +1,11 @@
 import type {Metadata, Viewport} from "next";
-import "./globals.css";
+import "../globals.css";
 import AppWrapperClientComponent from "@/app/_component/common/appWrapperComponent";
 import localFont from "next/font/local";
-import LayoutWrapperComponent from "@/app/_component/layout/layoutWrapperComponent";
+import {ReactNode} from "react";
 
 const pretendard = localFont({
-    src: "../public/fonts/PretendardVariable.woff2",
+    src: "../../public/fonts/PretendardVariable.woff2",
     display: "swap",
     weight: "45 920",
     variable: "--font-pretendard",
@@ -23,25 +23,19 @@ export const viewport: Viewport = {
     userScalable: false,
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayoutComponent({children}: Readonly<{children: ReactNode}>) {
     return (
         <html
             lang="en"
             className={`${pretendard.variable}`}
         >
-        <AppWrapperClientComponent>
-            <body
-                className={`${pretendard.className} max-w-[430px]`}
-            >
-            <LayoutWrapperComponent>
-                {children}
-            </LayoutWrapperComponent>
-            </body>
-        </AppWrapperClientComponent>
+            <AppWrapperClientComponent>
+                <body
+                    className={`${pretendard.className} max-w-[430px]`}
+                >
+                    {children}
+                </body>
+            </AppWrapperClientComponent>
         </html>
     );
 }

@@ -33,7 +33,7 @@ const BottomNavigationComponent = () => {
         setSelectedBottomNavigationItem(BOTTOM_NAVIGATION_ITEMS[index]);
     }
     return <div
-        className={`grid grid-cols-4 w-full h-[60px] fixed bottom-0 items-center justify-center bg-primary-orange shadow-[0_-4px_6px_-2px_rgba(0,0,0,0.1)]`}
+        className={`grid grid-cols-4 w-full h-[60px] fixed bottom-0 items-center justify-center bg-primary-nukki shadow-[0_-4px_6px_-2px_rgba(0,0,0,0.1)]`}
     >
         {
             BOTTOM_NAVIGATION_ITEMS.map((bottomNavigationItem: BottomNavigationItem, index: number) => (
@@ -60,7 +60,7 @@ const BottomNavigationItemComponent = ({isSelected, icon: Icon, onClickBottomNav
         <Icon
             className={isSelected ? 'stroke-[0.5px]' : ''}
             size={isSelected ? 35 : 30}
-            color={isSelected ? '#FFFFFF' : '#ffaa89'}
+            color={isSelected ? '#FFFFFF' : '#ff6a28'}
         />
     </div>
 }

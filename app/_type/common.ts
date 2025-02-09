@@ -1,5 +1,16 @@
 import {Member} from "@/app/_type/entity/member";
 
+export type CommonCssProps = {
+    className?: string
+    width?: number
+    height?: number
+    fontSize?: number
+}
+
+export type TailwindCssProperty = {
+    [key: number]: string
+}
+
 export type ApiResponse<T> = {
     data: T,
     message: string,

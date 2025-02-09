@@ -26,7 +26,7 @@ const getRefreshedAccessToken = async (refreshToken: string) => {
 }
 export const authOptions: NextAuthOptions = {
     pages: {
-        signIn: "/",
+        signIn: "/login",
     },
     providers: [
         KakaoProvider({

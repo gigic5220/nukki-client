@@ -1,5 +1,6 @@
 import {withAuth} from "next-auth/middleware"
 import {NextRequest, NextResponse} from "next/server";
+
 const addCustomHeaders = (request: NextRequest): NextResponse => {
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-pathname", request.nextUrl.pathname);
@@ -9,6 +10,7 @@ const addCustomHeaders = (request: NextRequest): NextResponse => {
         },
     });
 }
+
 export default withAuth(
     addCustomHeaders,
     {
@@ -18,10 +20,11 @@ export default withAuth(
             },
         },
         pages: {
-            signIn: '/',
+            signIn: '/login',
         },
     },
 )
+
 export const config = {
-    matcher: ['/((?!$).*)'], // '/'를 제외한 모든 경로
+    matcher: ['/my/:path*'],
 };
