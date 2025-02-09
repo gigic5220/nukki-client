@@ -1,16 +1,17 @@
 'use client';
 
-export default function Home() {
+import NukkiFeedComponent from "@/app/_component/home/NukkiFeedComponent";
 
-  /*const testKakaoLogin = async () => {
-    await signIn("kakao", {
-      redirect: true,
-      callbackUrl: "/",
-    });
-  };*/
+export default function HomePage() {
+
 
   return (
-      <div>
+      <div
+        className={'flex flex-col items-center scroll-x'}
+      >
+          <NukkiFeedComponent/>
+          <NukkiFeedComponent/>
+          <NukkiFeedComponent/>
       </div>
   );
 }

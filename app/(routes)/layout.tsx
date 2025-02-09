@@ -31,7 +31,7 @@ export default function RootLayoutComponent({children}: Readonly<{children: Reac
         >
             <AppWrapperClientComponent>
                 <body
-                    className={`${pretendard.className} max-w-[430px]`}
+                    className={`${pretendard.className} max-w-[430px] scrollbar_hidden`}
                 >
                     {children}
                 </body>

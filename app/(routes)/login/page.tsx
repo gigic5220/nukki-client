@@ -2,7 +2,6 @@
 
 import useLogin from "@/app/_hooks/useLogin";
 import LogoTextComponent from "@/app/_component/common/logoTextComponent";
-import CommonButtonComponent from "@/app/_component/common/commonButtonComponent";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -37,19 +36,6 @@ export default function LoginPage() {
                     loading={'eager'}
                 />
             </div>
-            {/*<CommonButtonComponent
-                backgroundColor={'bg-kakao-yellow'}
-                textContent={
-                    <div
-                        className={`flex items-center justify-center`}
-                    >
-                        <p>
-                            카카오 로그인
-                        </p>
-                    </div>
-                }
-                onClick={handleClickKakaoLoginButton}
-            />*/}
         </div>
     );
 }

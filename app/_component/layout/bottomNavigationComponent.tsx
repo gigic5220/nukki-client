@@ -33,18 +33,22 @@ const BottomNavigationComponent = () => {
         setSelectedBottomNavigationItem(BOTTOM_NAVIGATION_ITEMS[index]);
     }
     return <div
-        className={`grid grid-cols-4 w-full h-[60px] fixed bottom-0 items-center justify-center bg-primary-nukki shadow-[0_-4px_6px_-2px_rgba(0,0,0,0.1)]`}
+        className={`h-[60px]`}
     >
-        {
-            BOTTOM_NAVIGATION_ITEMS.map((bottomNavigationItem: BottomNavigationItem, index: number) => (
-                <BottomNavigationItemComponent
-                    key={index}
-                    isSelected={bottomNavigationItem.key === selectedBottomNavigationItem.key}
-                    icon={bottomNavigationItem.icon}
-                    onClickBottomNavigationItem={() => handleClickBottomNavigationItem(index)}
-                />
-            ))
-        }
+        <div
+            className={`grid grid-cols-4 w-full h-[60px] bottom-0 items-center justify-center bg-primary-nukki shadow-[0_-4px_6px_-2px_rgba(0,0,0,0.1)]`}
+        >
+            {
+                BOTTOM_NAVIGATION_ITEMS.map((bottomNavigationItem: BottomNavigationItem, index: number) => (
+                    <BottomNavigationItemComponent
+                        key={index}
+                        isSelected={bottomNavigationItem.key === selectedBottomNavigationItem.key}
+                        icon={bottomNavigationItem.icon}
+                        onClickBottomNavigationItem={() => handleClickBottomNavigationItem(index)}
+                    />
+                ))
+            }
+        </div>
     </div>
 }
 type BottomNavigationItemComponentProps = {
