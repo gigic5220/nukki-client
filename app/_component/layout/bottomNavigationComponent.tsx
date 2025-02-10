@@ -62,8 +62,8 @@ const BottomNavigationItemComponent = ({isSelected, icon: Icon, onClickBottomNav
         onClick={onClickBottomNavigationItem}
     >
         <Icon
-            className={isSelected ? 'stroke-[0.5px]' : ''}
-            size={isSelected ? 35 : 30}
+
+            size={isSelected ? 30 : 25}
             color={isSelected ? '#FFFFFF' : '#ff6a28'}
         />
     </div>

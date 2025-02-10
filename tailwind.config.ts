@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         'primary-black': "#000000",
         'primary-white': "#bdbdbd",
+        'primary-gray': "#b8b8b8",
         'primary-disabled': "#b6b6b6",
         'primary-nukki': "#ff9467"
       },
