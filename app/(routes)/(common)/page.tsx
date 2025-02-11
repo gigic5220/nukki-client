@@ -8,7 +8,7 @@ export default function HomePage() {
 
   return (
       <div
-        className={'flex flex-col items-center scroll-x w-screen'}
+        className={'flex flex-col items-center scroll-x w-screen p-4'}
       >
           <NukkiFeed2Component/>
           <NukkiFeedComponent/>
