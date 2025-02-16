@@ -1,4 +1,4 @@
-import {Member} from "@/app/_type/entity/member";
+import {Member} from "@/app/_type/model/member";
 
 export type CommonCssProps = {
     className?: string
@@ -12,38 +12,38 @@ export type TailwindCssProperty = {
 }
 
 export type ApiResponse<T> = {
-    data: T,
-    message: string,
-    statusCode: number,
+    data: T
+    message: string
+    statusCode: number
     success: boolean
 }
 
 export type ListResponse<T> = {
     content: T,
-    empty: boolean,
-    first: boolean,
-    last: boolean,
-    number: number,
-    numberOfElements: number,
+    empty: boolean
+    first: boolean
+    last: boolean
+    number: number
+    numberOfElements: number
     pageable: Pageable
-    size: number,
-    sort: Sort,
-    totalElements: number,
+    size: number
+    sort: Sort
+    totalElements: number
     totalPages: number
 }
 
 type Pageable = {
-    offset: number,
-    pageNumber: number,
-    pageSize: number,
-    paged: boolean,
-    sort: Sort,
+    offset: number
+    pageNumber: number
+    pageSize: number
+    paged: boolean
+    sort: Sort
     unpaged: boolean
 }
 
 type Sort = {
-    empty: boolean,
-    sorted: boolean,
+    empty: boolean
+    sorted: boolean
     unsorted: boolean
 }
 
@@ -52,5 +52,11 @@ export type TokenInfoWithMember = {
     accessTokenExpires: number
     refreshToken: string
     member: Member
+}
+
+export interface CommonListParams {
+    page: number
+    pageSize: number
+    sort?: string
 }
 

@@ -1,5 +1,5 @@
 import "next-auth/jwt";
-import {Member} from "@/app/_type/entity/member";
+import {Member} from "@/app/_type/model/member";
 declare module "next-auth" {
     interface User {
         data: {

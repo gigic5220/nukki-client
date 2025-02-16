@@ -14,11 +14,11 @@ interface CommonButtonComponentProps extends CommonCssProps{
 
 const CommonButtonComponent = ({width, height, textContent, onClick, disabled = false, backgroundColor, textColor} : CommonButtonComponentProps) => {
 
-    const baseClasses = "flex items-center justify-center rounded-md shadow-md";
-    const widthClass = width ? widthProperty[width] : "w-full";
+    const baseClasses = "flex items-center justify-center rounded-md shadow-md px-4 py-2";
+    const widthClass = width ? widthProperty[width] : "";
     const heightClass = height ? heightProperty[height] : "";
-    const backgroundClass = disabled ? "bg-primary-disabled" : backgroundColor || "bg-tertiary-blue";
-    const textClass = disabled ? "text-primary-disabled-text" : textColor || "text-primary-white";
+    const backgroundClass = disabled ? "bg-primary-disabled" : (backgroundColor || "bg-primary-button-bg");
+    const textClass = `${disabled ? "text-primary-disabled-text" : (textColor || "text-primary-white")} text-[20px]`;
 
     return (
         <button

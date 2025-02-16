@@ -3,6 +3,7 @@ import "../globals.css";
 import AppWrapperClientComponent from "@/app/_component/common/appWrapperComponent";
 import localFont from "next/font/local";
 import {ReactNode} from "react";
+import CommonAlertComponent from "@/app/_component/common/CommonAlertComponent";
 
 const pretendard = localFont({
     src: "../../public/fonts/PretendardVariable.woff2",
@@ -24,6 +25,7 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayoutComponent({children}: Readonly<{children: ReactNode}>) {
+
     return (
         <html
             lang="en"
@@ -34,6 +36,7 @@ export default function RootLayoutComponent({children}: Readonly<{children: Reac
                     className={`${pretendard.className} max-w-[430px] scrollbar_hidden`}
                 >
                     {children}
+                    <CommonAlertComponent/>
                 </body>
             </AppWrapperClientComponent>
         </html>
