@@ -14,7 +14,7 @@ export default function LoginPage() {
 
     return (
         <div
-            className={`flex flex-col items-center justify-between py-20 px-[24px] h-screen`}
+            className={`flex flex-col items-center justify-between py-20 px-[24px]`}
         >
             <div
                 className={`flex flex-col items-center justify-center`}
